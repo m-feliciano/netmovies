@@ -1,4 +1,5 @@
 import "./styles.css"
+import {Link} from "react-router-dom";
 
 function Listing() {
 
@@ -35,7 +36,9 @@ function Listing() {
                         <button type="submit" className="btn btn-primary netmovies-btn">Save</button>
                     </div>
                 </form>
-                <button className="btn btn-primary netmovies-btn mt-3">Cancel</button>
+                <Link to="/">
+                    <button className="btn btn-primary netmovies-btn mt-3">Cancel</button>
+                </Link>
             </div>
         </div>
     )
