@@ -1,6 +1,8 @@
+import Pagination from "../Pagination";
+
 function Form() {
     return (
-        <h1>Listing Page</h1>
+        <Pagination />
     )
 }
 
