@@ -1,3 +1,4 @@
+import React from 'react'
 import Pagination from "../Pagination";
 import MovieCard from "../../components/MovieCard";
 

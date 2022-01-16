@@ -1,6 +1,6 @@
 import MovieScore from "../MovieScore";
 import {Link} from "react-router-dom";
-
+import React from 'react'
 
 function MovieCard() {
 
@@ -19,7 +19,7 @@ function MovieCard() {
                 <h3>{movie.title}</h3>
                 <MovieScore/>
                 <Link to={`/form/${movie.id}`}>
-                    <div className="btn btn-primary netmovies-btn">Review</div>
+                    <div className="btn btn-outline-warning netmovies-btn">Review</div>
                 </Link>
             </div>
         </div>

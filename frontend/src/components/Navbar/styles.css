@@ -9,7 +9,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #ddd;
+    color: #ffc107;
 }
 
 .netmovies-nav-content h1 {
@@ -24,6 +24,7 @@ header {
 }
 
 .netmovies-contact-link {
+    color: #aaaaaa;
     margin: 0 0 0 10px;
     font-size: 12px;
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 import MovieStars from "../MovieStars";
 import "./styles.css"
 

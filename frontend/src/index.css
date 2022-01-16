@@ -2,6 +2,8 @@
 
 :root {
     --color-primary: #181818;
+    --bs-body-bg: #000 !important;
+
 }
 
 * {
