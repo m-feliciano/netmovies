@@ -5,7 +5,7 @@ import {BASE_URL} from "../../utils/requests";
 import axios from "axios";
 import {MoviePage} from "../../types/movie";
 
-function Form() {
+function Listing() {
 
     const [PageNumber, setPageNumber] = useState(0);
 
@@ -43,4 +43,4 @@ function Form() {
     </>
 }
 
-export default Form
+export default Listing;
