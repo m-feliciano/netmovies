@@ -3,12 +3,11 @@
 :root {
     --color-primary: #181818;
     --bs-body-bg: #000 !important;
-
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 html, body {
