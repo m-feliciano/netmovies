@@ -14,7 +14,7 @@ public class MovieDTO {
 
     private Long id;
     private String title;
-    private String score;
+    private Double score;
     private Integer count;
     private String image;
 
