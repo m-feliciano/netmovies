@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import "./styles.css"
-import {Link} from "react-router-dom";
-import axios from "axios";
+import {Link, useNavigate} from "react-router-dom";
+import axios, {AxiosRequestConfig} from "axios";
 import {BASE_URL} from "../../utils/requests";
 import {Movie} from "../../types/movie";
+import {validateEmail} from "../../utils/validate";
 
 type Props = {
     movieId: String;
@@ -11,20 +12,48 @@ type Props = {
 
 function FormCard({movieId}: Props) {
 
+    const navigate = useNavigate();
+
     const [movie, setMovie] = useState<Movie>();
 
-    useEffect(() =>{
-        axios.get(`${BASE_URL}/api/movies/${movieId}`).then(res =>{
+    useEffect(() => {
+        axios.get(`${BASE_URL}/api/movies/${movieId}`).then(res => {
             setMovie(res.data);
         });
-    },[movieId]);
+    }, [movieId]);
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const email = (event.target as any).email.value;
+        const score = (event.target as any).score.value;
+
+        if (!validateEmail(email)) {
+            return;
+        }
+
+        const config: AxiosRequestConfig = {
+            baseURL: BASE_URL,
+            method: 'PUT',
+            url: '/api/scores',
+            data: {
+                email: email,
+                movieId: movieId,
+                score: score
+            }
+        }
+        axios(config).then(res => {
+            console.log(res.data);
+            navigate("/");
+        });
+    }
 
     return (
         <div className="netmovies-form-container">
             <img className="netmovies-movie-card-image" src={movie?.image} alt={movie?.title}/>
             <div className="netmovies-card-bottom-container">
                 <h3>{movie?.title}</h3>
-                <form className="netmovies-form">
+                <form className="netmovies-form" onSubmit={handleSubmit}>
                     <div className="form-group netmovies-form-group">
                         <label htmlFor="email">Enter email</label>
                         <input type="email" className="form-control" id="email"/>
