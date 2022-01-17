@@ -1,5 +1,5 @@
-# netmovies
-Project developed during Spring React Week - [DevSuperior](https://devsuperior.com.br) 💻🚀.
+# NetMovies
+The NetMovies project was developed during Spring React Week - [DevSuperior](https://devsuperior.com.br) 💻🚀.
 
 ## Layout
 <div align="left">
