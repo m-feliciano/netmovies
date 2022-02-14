@@ -1,6 +1,10 @@
 # NetMovies
 The NetMovies project was developed during Spring React Week - [DevSuperior](https://devsuperior.com.br) 💻🚀.
 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b636d65c-4ad2-4efb-980f-e7be4859f6be/deploy-status)](https://app.netlify.com/sites/netmovies/deploys)
+
+
 ## Layout
 <div align="left">
     <a href="https://netmovies.netlify.app/" target="_blank">
